@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors x99</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors x99</h1>
+    </header>
+    <main>
+        <div id="game-container">
+            <div id="move-selection">
+                <h2>Select Move <span id="move-number">1</span></h2>
+                <p id="points-remaining">Points Remaining: 99</p>
+                <div class="choices">
+                    <button class="choice" data-type="rock">
+                        <img src="images/rock.png" alt="Rock">
+                        <span>Rock</span>
+                    </button>
+                    <button class="choice" data-type="paper">
+                        <img src="images/paper.png" alt="Paper">
+                        <span>Paper</span>
+                    </button>
+                    <button class="choice" data-type="scissors">
+                        <img src="images/scissors.png" alt="Scissors">
+                        <span>Scissors</span>
+                    </button>
+                </div>
+                <div id="strength-container" class="hidden">
+                    <label for="strength-slider">Allocate Strength: <span id="strength-value">1</span></label>
+                    <input type="range" id="strength-slider" min="1" max="99" value="1">
+                    <button id="confirm-strength">Confirm Strength</button>
+                </div>
+            </div>
+            <div id="result" class="hidden">
+                <h2 id="result-title"></h2>
+                <div id="result-details"></div>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Rock Paper Scissors x99</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

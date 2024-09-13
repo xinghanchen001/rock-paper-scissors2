@@ -1,0 +1,233 @@
+/* Import a playful Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-align: center;
+    color: #ff6f61; /* Coral color */
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p {
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Layout */
+header, footer {
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#game-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.choice {
+    background-color: #FFEA00; /* Amber */
+    border: none;
+    cursor: pointer;
+    margin: 0 15px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.choice img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
+}
+
+.choice span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.choice:hover {
+    transform: translateY(-10px);
+    background-color: #FFEA00; /* Lighter amber */
+}
+
+.choice:hover img {
+    transform: rotate(15deg);
+}
+
+#points-remaining {
+    font-weight: bold;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+#strength-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#strength-container label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#strength-slider {
+    -webkit-appearance: none;
+    width: 80%;
+    max-width: 400px;
+    height: 15px;
+    background: linear-gradient(90deg, #ff6f61 0%, #ffcc80 100%);
+    outline: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#strength-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 3px solid #ff6f61;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#strength-slider::-moz-range-thumb {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 3px solid #ff6f61;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#confirm-strength {
+    margin-top: 10px;
+    background-color: #4db6ac; /* Teal */
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#confirm-strength:hover {
+    background-color: #26a69a;
+}
+
+button {
+    font-family: 'Fredoka One', cursive;
+    background-color: #42a5f5; /* Light Blue */
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #1e88e5;
+}
+
+#result {
+    text-align: center;
+}
+
+#result-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+#result-details {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #f0f0f0;
+    color: #6e6e73;
+    font-size: 0.9em;
+}
+
+/* Result Images */
+#result-details img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    .choices {
+        flex-direction: column;
+    }
+
+    .choice {
+        margin: 10px 0;
+    }
+
+    .choice img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #strength-slider {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
